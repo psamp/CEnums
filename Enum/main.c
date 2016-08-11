@@ -7,20 +7,9 @@
 //
 
 #include <stdio.h>
-#include <limits.h>
+#include "Color.h"
 
-typedef enum {
-    Red = 1,
-    Orange,
-    Yellow,
-    Green,
-    Blue,
-    Indigo,
-    Violet,
-    Black,
-    White,
-    Null = INT_MIN
-}Color;
+char* stringFromColor(Color color);
 
 int main(int argc, const char * argv[]) {
     
@@ -44,46 +33,55 @@ int main(int argc, const char * argv[]) {
         checkThatProperAmountOfItemsWereScanned = scanf("%d", &usersFavoriteColor);
     }
     
-    switch (usersFavoriteColor) {
+    printf("");
+    
+    return 0;
+}
+
+char* stringFromColor(Color color){
+    char *rtn;
+    
+    switch (color) {
         case Red: {
-            printf("You like red\n");
+            rtn = "red";
             break;
         }
         case Orange: {
-            printf("You like orange\n");
+            rtn = "orange";
             break;
         }
         case Yellow: {
-            printf("You like yellow\n");
+            rtn = "yellow";
             break;
         }
         case Green: {
-            printf("You like green\n");
+            rtn = "green";
             break;
         }
         case Blue: {
-            printf("You like blue\n");
+            rtn = "blue";
             break;
         }
         case Indigo: {
-            printf("You like indigo\n");
+            rtn = "indigo";
             break;
         }
         case Violet: {
-            printf("You like violet\n");
+            rtn = "violet";
             break;
         }
         case White: {
-            printf("You like white\n");
+            rtn = "white";
             break;
         }
         case Black: {
-            printf("You like black\n");
+            rtn = "black";
             break;
         }
         default:
             break;
     }
     
-    return 0;
+    return rtn;
+    
 }
