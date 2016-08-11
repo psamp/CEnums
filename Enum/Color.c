@@ -8,7 +8,7 @@
 
 #include "Color.h"
 
-char* stringFromColor(Color color){
+char* ColorToString(Color color){
     char* rtn;
     
     switch (color) {

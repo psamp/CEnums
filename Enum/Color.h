@@ -27,6 +27,6 @@ typedef enum {
     LastColor = ColorWhite
 }Color;
 
-char* stringFromColor(Color color);
+char* ColorToString(Color color);
 
 #endif /* Color_h */

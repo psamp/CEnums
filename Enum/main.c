@@ -31,7 +31,7 @@ int main(int argc, const char * argv[]) {
         checkThatProperAmountOfItemsWereScanned = scanf("%d", &usersFavoriteColor);
     }
     
-    char *colorString = stringFromColor(usersFavoriteColor);
+    char *colorString = ColorToString(usersFavoriteColor);
     
     printf("You like %s\n\n", colorString);
     
