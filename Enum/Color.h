@@ -13,16 +13,20 @@
 #include <limits.h>
 
 typedef enum {
-    Red = 1,
-    Orange,
-    Yellow,
-    Green,
-    Blue,
-    Indigo,
-    Violet,
-    Black,
-    White,
-    Null = INT_MIN
+    ColorRed = 1,
+    ColorOrange,
+    ColorYellow,
+    ColorGreen,
+    ColorBlue,
+    ColorIndigo,
+    ColorViolet,
+    ColorBlack,
+    ColorWhite,
+    Null = INT_MIN,
+    FirstColor = ColorRed,
+    LastColor = ColorWhite
 }Color;
+
+char* stringFromColor(Color color);
 
 #endif /* Color_h */

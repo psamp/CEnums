@@ -9,8 +9,6 @@
 #include <stdio.h>
 #include "Color.h"
 
-char* stringFromColor(Color color);
-
 int main(int argc, const char * argv[]) {
     
     printf("What's your favorite color?\n\n");
@@ -18,70 +16,25 @@ int main(int argc, const char * argv[]) {
     Color usersFavoriteColor = Null;
     int checkThatProperAmountOfItemsWereScanned = 0;
     
-    while ( (checkThatProperAmountOfItemsWereScanned != 1) || (usersFavoriteColor < Red) || (usersFavoriteColor > White)) {
+    while ( (checkThatProperAmountOfItemsWereScanned != 1) || (usersFavoriteColor < FirstColor) || (usersFavoriteColor > LastColor)) {
         
         printf("Please enter:\n");
-        printf("    %d: red\n", Red);
-        printf("    %d: orange\n", Orange);
-        printf("    %d: yellow\n", Yellow);
-        printf("    %d: green\n", Green);
-        printf("    %d: blue\n", Blue);
-        printf("    %d: indigo\n", Indigo);
-        printf("    %d: violet\n\n", Violet);
+        printf("    %d: red\n", ColorRed);
+        printf("    %d: orange\n", ColorOrange);
+        printf("    %d: yellow\n", ColorYellow);
+        printf("    %d: green\n", ColorGreen);
+        printf("    %d: blue\n", ColorBlue);
+        printf("    %d: indigo\n", ColorIndigo);
+        printf("    %d: violet\n\n", ColorViolet);
         
         fpurge(stdin);
         checkThatProperAmountOfItemsWereScanned = scanf("%d", &usersFavoriteColor);
     }
     
-    printf("");
+    char *colorString = stringFromColor(usersFavoriteColor);
+    
+    printf("You like %s\n\n", colorString);
     
     return 0;
 }
 
-char* stringFromColor(Color color){
-    char *rtn;
-    
-    switch (color) {
-        case Red: {
-            rtn = "red";
-            break;
-        }
-        case Orange: {
-            rtn = "orange";
-            break;
-        }
-        case Yellow: {
-            rtn = "yellow";
-            break;
-        }
-        case Green: {
-            rtn = "green";
-            break;
-        }
-        case Blue: {
-            rtn = "blue";
-            break;
-        }
-        case Indigo: {
-            rtn = "indigo";
-            break;
-        }
-        case Violet: {
-            rtn = "violet";
-            break;
-        }
-        case White: {
-            rtn = "white";
-            break;
-        }
-        case Black: {
-            rtn = "black";
-            break;
-        }
-        default:
-            break;
-    }
-    
-    return rtn;
-    
-}

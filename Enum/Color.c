@@ -7,3 +7,51 @@
 //
 
 #include "Color.h"
+
+char* stringFromColor(Color color){
+    char* rtn;
+    
+    switch (color) {
+        case ColorRed: {
+            rtn = "red";
+            break;
+        }
+        case ColorOrange: {
+            rtn = "orange";
+            break;
+        }
+        case ColorYellow: {
+            rtn = "yellow";
+            break;
+        }
+        case ColorGreen: {
+            rtn = "green";
+            break;
+        }
+        case ColorBlue: {
+            rtn = "blue";
+            break;
+        }
+        case ColorIndigo: {
+            rtn = "indigo";
+            break;
+        }
+        case ColorViolet: {
+            rtn = "violet";
+            break;
+        }
+        case ColorWhite: {
+            rtn = "white";
+            break;
+        }
+        case ColorBlack: {
+            rtn = "black";
+            break;
+        }
+        default:
+            rtn = NULL;
+            break;
+    }
+    
+    return rtn;
+}
