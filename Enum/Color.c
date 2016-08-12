@@ -13,39 +13,39 @@ char* ColorToString(Color color){
     
     switch (color) {
         case ColorRed: {
-            rtn = "red";
+            rtn = "Red";
             break;
         }
         case ColorOrange: {
-            rtn = "orange";
+            rtn = "Orange";
             break;
         }
         case ColorYellow: {
-            rtn = "yellow";
+            rtn = "Yellow";
             break;
         }
         case ColorGreen: {
-            rtn = "green";
+            rtn = "Green";
             break;
         }
         case ColorBlue: {
-            rtn = "blue";
+            rtn = "Blue";
             break;
         }
         case ColorIndigo: {
-            rtn = "indigo";
+            rtn = "Indigo";
             break;
         }
         case ColorViolet: {
-            rtn = "violet";
+            rtn = "Violet";
             break;
         }
         case ColorWhite: {
-            rtn = "white";
+            rtn = "White";
             break;
         }
         case ColorBlack: {
-            rtn = "black";
+            rtn = "Black";
             break;
         }
         default:

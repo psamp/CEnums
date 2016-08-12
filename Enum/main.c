@@ -8,6 +8,9 @@
 
 #include <stdio.h>
 #include "Color.h"
+#include <string.h>
+
+void getWordFromUser(char *destination, char prompt[]);
 
 int main(int argc, const char * argv[]) {
     
@@ -25,7 +28,9 @@ int main(int argc, const char * argv[]) {
         printf("    %d: green\n", ColorGreen);
         printf("    %d: blue\n", ColorBlue);
         printf("    %d: indigo\n", ColorIndigo);
-        printf("    %d: violet\n\n", ColorViolet);
+        printf("    %d: violet\n", ColorViolet);
+        printf("    %d: white\n", ColorWhite);
+        printf("    %d: black\n\n", ColorBlack);
         
         fpurge(stdin);
         checkThatProperAmountOfItemsWereScanned = scanf("%d", &usersFavoriteColor);
@@ -35,6 +40,25 @@ int main(int argc, const char * argv[]) {
     
     printf("You like %s\n\n", colorString);
     
+    char word[100] = {'\0'};
+    
+    getWordFromUser(word, "Enter your first name (without any spaces):\n\n");
+    printf("Hello, %s\n\n", word);
+    
     return 0;
 }
 
+void getWordFromUser(char *destination, char prompt[]) {
+    
+    int numberOfItemsScanned = 0;
+    unsigned long stringLength = 0;
+    
+    while (numberOfItemsScanned != 1 || stringLength <= 0) {
+        printf("%s", prompt);
+        fpurge(stdin);
+        
+        numberOfItemsScanned = scanf("%s", destination);
+        stringLength = strlen(destination);
+    }
+    
+}
