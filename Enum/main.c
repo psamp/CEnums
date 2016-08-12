@@ -29,14 +29,18 @@ int main(int argc, const char * argv[]) {
         printf("    %d: blue\n", ColorBlue);
         printf("    %d: indigo\n", ColorIndigo);
         printf("    %d: violet\n", ColorViolet);
-        printf("    %d: white\n", ColorWhite);
-        printf("    %d: black\n\n", ColorBlack);
+        printf("    %d: black\n", ColorBlack);
+        printf("    %d: white\n\n", ColorWhite);
         
         fpurge(stdin);
         checkThatProperAmountOfItemsWereScanned = scanf("%d", &usersFavoriteColor);
     }
     
     char *colorString = ColorToString(usersFavoriteColor);
+    
+    if (colorString == NULL) {
+        return 1;
+    }
     
     printf("You like %s\n\n", colorString);
     
